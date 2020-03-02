@@ -6,8 +6,7 @@ library(magrittr)
 library(ggplot2)
 library(tidyquant)
 library(alphavantager)
-av_api_key('MZE3U0MSR1DCE53Z')
-setwd('C:/Users/andre/StockAnalysis')
+av_api_key('AV API KEY')
 NYSE <- read_csv('NYSE_TICKERS.csv')
 
 tickers <- NYSE$`ACT Symbol`
