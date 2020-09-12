@@ -1,2 +1,2 @@
 # delphi
-ML bot to use news reports to predict earnings reports, and place robinhood trades using that info
+Basically a collection of interesting analysis I have done concerning the market.
