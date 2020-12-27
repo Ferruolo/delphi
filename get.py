@@ -2,17 +2,17 @@
 import requests
 import io
 import dask
-from bs4 import BeautifulSoup as BS
-import nltk
+#from bs4 import BeautifulSoup as BS
+# import nltk
 import pandas
 import numpy as np
 
-def News(ticker):
-    B = BS(requests.get(f"https://www.wsj.com/market-data/quotes/{ticker}", headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'}).content, features="html.parser")
-    News = B.find('ul', {'id': "newsSummary_c"})
-    News = [a.getText() for a in News.find_all('a')]
-    News = [nltk.word_tokenize(h) for h in News]
-    return dask.dataframe.from_array(np.asarray(News))
+# def News(ticker):
+#     B = BS(requests.get(f"https://www.wsj.com/market-data/quotes/{ticker}", headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'}).content, features="html.parser")
+#     News = B.find('ul', {'id': "newsSummary_c"})
+#     News = [a.getText() for a in News.find_all('a')]
+#     News = [nltk.word_tokenize(h) for h in News]
+#     return dask.dataframe.from_array(np.asarray(News))
                   
 
 api_key = 'MZE3U0MSR1DCE53Z'
